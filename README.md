@@ -14,3 +14,6 @@ You can change most of the constants at the beginning of the script to set it up
 * **showNoComments** - Logs "No new comments" message. For debug purposes.
 * **commentsToCheck** - Number of comments to check back for new ones. It should not be lower than number of comments per interval.
 * **checkInterval** - Sleep time after which a check for new comments is performed.
+## Todo
+* Following based on message keywords'
+* Daemon sometimes stops working after the window has been out of focus for some time, and then focused on again.
