@@ -16,8 +16,8 @@ const showAll = true;
 
 const filterHash = "::>>";
 const showNoComments = false;
-const commentsToCheck = 100;
-const checkInterval = 1000;
+const commentsToCheck = 10;
+const checkInterval = 3000;
 
 // Error codes
 const CHAT_NOT_FOUND = -1;
@@ -149,12 +149,11 @@ async function runDaemonOnChat(chatName) {
 
     while(true) {
         try {
+            await sleep(5000);
             await runDaemonOnChat(chatNameToFollow);
         }
         catch(e) {
-            log("There has been an error during start/run of the daemon. Restarting...");
-            log("\t\t\tError caught: \'" + e + "\'");
-            await sleep(5000);
+            log("There has been an error during start/run of the daemon: \"" + e + "\" Restarting...");
         }
     }
 
